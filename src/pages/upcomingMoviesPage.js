@@ -15,6 +15,7 @@ const UpcomingMoviesPage = (props) => {
     return <h1>{error.message}</h1>
   }  
   const movies = data.results;
+  //movies.sort((a,b)=> parseFloat(b.vote_average) - parseFloat(a.vote_average))
 
   // Redundant, but necessary to avoid app crashing.
   const watchList = movies.filter(m => m.watchList)

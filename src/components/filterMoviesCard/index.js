@@ -43,6 +43,10 @@ export default function FilterMoviesCard(props) {
   const genres = data.genres;
   genres.unshift({ id: "0", name: "All" });
 
+  const rating = ['All', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  const sorting = ['ON', 'OFF'];
+
   const handleChange = (e, type, value) => {
     e.preventDefault();
     props.onUserInput(type, value); // NEW
@@ -54,6 +58,14 @@ export default function FilterMoviesCard(props) {
 
   const handleGenreChange = (e) => {
     handleChange(e, "genre", e.target.value);
+  };
+
+  const handleRatingChange = (e) => {
+    handleChange(e, "rating", e.target.value);
+  };
+
+  const handleSortingChange = (e) => {
+    handleChange(e, "sorting", e.target.value);
   };
 
   return (
@@ -89,6 +101,47 @@ export default function FilterMoviesCard(props) {
             })}
           </Select>
         </FormControl>
+
+
+        <FormControl className={classes.formControl}>
+          <InputLabel id="rating-label">Rating</InputLabel>
+          <Select
+          labelId="rating-label"
+          id="rating-select"
+          value={props.ratingFilter}
+          onChange={handleRatingChange}
+          >
+            {rating.map((r) => {
+              return (
+                <MenuItem key={r} value={r}>
+                  {r}
+                </MenuItem>
+              );
+            })}
+          </Select>
+        </FormControl>
+
+
+        <FormControl className={classes.formControl}>
+          <InputLabel id="sorting-label">Sorting</InputLabel>
+          <Select
+          labelId="sorting-label"
+          id="sorting-select"
+          value={props.sortingFilter}
+          onChange={handleSortingChange}
+          >
+            {sorting.map((r) => {
+              return (
+                <MenuItem key={r} value={r}>
+                  {r}
+                </MenuItem>
+              );
+            })}
+          </Select>
+        </FormControl>
+
+
+
       </CardContent>
       <CardMedia
         className={classes.media}

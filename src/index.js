@@ -8,6 +8,10 @@ import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom";
 import HomePage from "./pages/homePage";
 //
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
+import NowPlayingMoviesPage from "./pages/nowPlayingMoviesPage";
+import PopularMoviesPage from "./pages/popularMoviesPage";
+import TopRatedMoviesPage from "./pages/topRatedMoviesPage";
+import ActorPage from "./pages/actorDetailsPage";
 //
 import MoviePage from "./pages/movieDetailsPage";
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage";
@@ -32,12 +36,20 @@ const App = () => {
         <MoviesContextProvider>
             {" "}
             <Switch>
-            <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
+        <Route exact path="/movie/now_playing" component={NowPlayingMoviesPage} />
+        <Route exact path="/movie/popular" component={PopularMoviesPage} />
+        <Route exact path="/movie/top_rated" component={TopRatedMoviesPage} /> 
+        <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
         <Route exact path="/reviews/form" component={AddMovieReviewPage} />
-      <Route path="/reviews/:id" component={MovieReviewPage} />
+        <Route path="/reviews/:id" component={MovieReviewPage} />
         <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
         <Route exact path="/movies/watchList" component={WatchListPage} />
         <Route path="/movies/:id" component={MoviePage} />
+        <Route path="/actor/:id" component={ActorPage} />
+        
+
+
+
         <Route exact path="/" component={HomePage} />
         <Redirect from="*" to="/" />
         </Switch>

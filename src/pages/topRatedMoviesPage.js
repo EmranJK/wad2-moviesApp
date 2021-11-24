@@ -2,10 +2,10 @@ import React from "react";
 import PageTemplate from "../components/templateMovieListPage";
 import { useQuery } from 'react-query'
 import Spinner from '../components/spinner'
-import {getMovies} from '../api/tmdb-api'
+import {getTopRatedMovies} from '../api/tmdb-api'
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
-const HomePage = (props) => {
-  const {  data, error, isLoading, isError }  = useQuery('discover', getMovies)
+const TopRatedMoviesPage = (props) => {
+  const {  data, error, isLoading, isError }  = useQuery('top', getTopRatedMovies)
 
   if (isLoading) {
     return <Spinner />
@@ -15,7 +15,6 @@ const HomePage = (props) => {
     return <h1>{error.message}</h1>
   }  
   const movies = data.results;
-  //movies.sort((a,b)=> parseFloat(b.vote_average) - parseFloat(a.vote_average))
 
   // Redundant, but necessary to avoid app crashing.
   const favorites = movies.filter(m => m.favorite)
@@ -24,7 +23,7 @@ const HomePage = (props) => {
 
   return (
     <PageTemplate
-      title="Discover Movies"
+      title="Top Rated Movies"
       movies={movies}
       action={(movie) => {
         return <AddToFavoritesIcon movie={movie} />
@@ -33,4 +32,4 @@ const HomePage = (props) => {
 );
 };
 
-export default HomePage;
+export default TopRatedMoviesPage;
