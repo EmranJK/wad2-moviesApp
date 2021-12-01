@@ -60,7 +60,10 @@ const useStyles = makeStyles((theme) => ({
                   <Link to={`/actor/${r.id}`}>
                     <img
                         className="card-img-tag center "
-                        alt={r.name}
+                        width="300" 
+                        height="450"
+                        
+                        alt={r.id}
                         src={
                           r.profile_path
                               ? `https://image.tmdb.org/t/p/w500/${r.profile_path}`
@@ -68,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
                         }
                     />
                     </Link>
-                    {r.id}
+                    {r.name}
                   </div></div>)})}</div></div>
   );
 };

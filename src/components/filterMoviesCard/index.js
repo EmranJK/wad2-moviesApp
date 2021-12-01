@@ -47,6 +47,9 @@ export default function FilterMoviesCard(props) {
 
   const sorting = ['ON', 'OFF'];
 
+
+  const language = ['English', 'Spanish'];
+
   const handleChange = (e, type, value) => {
     e.preventDefault();
     props.onUserInput(type, value); // NEW
@@ -63,6 +66,11 @@ export default function FilterMoviesCard(props) {
   const handleRatingChange = (e) => {
     handleChange(e, "rating", e.target.value);
   };
+
+  const handleLanguageChange = (e) => {
+    handleChange(e, "language", e.target.value);
+  };
+
 
   const handleSortingChange = (e) => {
     handleChange(e, "sorting", e.target.value);
@@ -140,6 +148,23 @@ export default function FilterMoviesCard(props) {
           </Select>
         </FormControl>
 
+        <FormControl className={classes.formControl}>
+          <InputLabel id="lanuguage-label">Languages</InputLabel>
+          <Select
+          labelId="language-label"
+          id="language-select"
+          value={props.lanuguageFilter}
+          onChange={handleLanguageChange}
+          >
+            {language.map((r) => {
+              return (
+                <MenuItem key={r} value={r}>
+                  {r}
+                </MenuItem>
+              );
+            })}
+          </Select>
+        </FormControl>
 
 
       </CardContent>
@@ -148,13 +173,11 @@ export default function FilterMoviesCard(props) {
         image={img}
         title="Filter"
       />
-      <CardContent>
-        <Typography variant="h5" component="h1">
-          <SearchIcon fontSize="large" />
-          Filter the movies.
-          <br />
-        </Typography>
-      </CardContent>
+     
+
+      
+              
+
     </Card>
   );
 }
