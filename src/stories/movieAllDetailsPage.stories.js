@@ -1,19 +1,22 @@
 import React from "react";
-import MovieHeader from "../components/headerMovie";
+import TemplateMoviePage from "../components/templateMoviePage";
 import SampleMovie from "./sampleData";
 import { MemoryRouter } from "react-router";
-import { action } from "@storybook/addon-actions";
 import MoviesContextProvider from "../contexts/moviesContext";
+import MovieDetails from "../components/movieDetails";
 
 export default {
-  title: "Movie Details Page/MovieHeader",
-  component: MovieHeader,
+  title: "Movie All Details Page/templateMoviePage",
+  component: TemplateMoviePage,
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,
     (Story) => <MoviesContextProvider>{Story()}</MoviesContextProvider>,
+
   ],
 };
 
-export const Basic = () => <MovieHeader movie={SampleMovie} />;
+export const Basic = () => {<TemplateMoviePage movie={SampleMovie} /> ;
+
+}
 
 Basic.storyName = "Default";

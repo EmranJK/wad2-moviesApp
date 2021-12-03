@@ -7,8 +7,12 @@ import { action } from "@storybook/addon-actions";
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
 import PlaylistAddIcon from "@material-ui/icons/PlaylistAdd";
 
+import DeleteIcon from "../components/cardIcons/removeFromWatchList";
+
+import RateReviewIcon from "@material-ui/icons/RateReview";
+
 export default {
-  title: "Home Page/MovieCard",
+  title: "Home Page/MustWatchMovieCard",
   component: MovieCard,
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,
@@ -20,7 +24,7 @@ export const Basic = () => {
   return (
     <MovieCard
       movie={SampleMovie}
-      action={(movie) => <AddToFavoritesIcon movie={movie} />}
+      action={(movie) => <DeleteIcon movie={movie} />}
       taging={(movie) => null}
     />
   );
@@ -32,7 +36,7 @@ export const Exceptional = () => {
   return (
     <MovieCard
       movie={sampleNoPoster}
-      action={(movie) => <AddToFavoritesIcon movie={movie} />}
+      action={(movie) => <DeleteIcon movie={movie} />}
       taging={(movie) => null}
     />
   );

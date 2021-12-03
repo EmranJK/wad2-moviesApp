@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   offset: theme.mixins.toolbar,
+  
 }));
 
 const SiteHeader = ( { history }) => {
