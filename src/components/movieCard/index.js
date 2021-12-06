@@ -44,7 +44,7 @@ export default function MovieCard({ movie, action }) {
   };
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} style={{background: "#e66465"}}>
       <CardHeader
       className={classes.header}
       avatar={

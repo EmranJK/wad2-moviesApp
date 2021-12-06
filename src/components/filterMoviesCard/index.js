@@ -77,7 +77,7 @@ export default function FilterMoviesCard(props) {
   };
 
   return (
-    <Card className={classes.root} variant="outlined">
+    <Card className={classes.root} variant="outlined" style = {{background: "#9198e5"}}>
       <CardContent>
         <Typography variant="h5" component="h1">
           <SearchIcon fontSize="large" />

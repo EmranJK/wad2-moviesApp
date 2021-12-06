@@ -38,7 +38,7 @@ const removeFromWatchList = (movie) => {
   };
 
  return (
-    <MoviesContext.Provider
+    <MoviesContext.Provider 
       value={{
         favorites,
         addToFavorites,
