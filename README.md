@@ -51,36 +51,38 @@ contained many other features aside from the 3 new endpoints. The rest of the fe
 
 [ A screenshot from the Storybook UI that lists all the stories for the app's components, and highlights those relating to my __new/modified components__ .
 
-![](./images/1.png)
+<p>
+    <img src="./images/1.PNG" width="220" height="240" />
+</p>
 ### UI Design.
 
 [ A screenshots of the __new/modified app pages__ I developed (and modified existing pages), Includes an appropriate caption for each one.
 
-![ ](./images/2.png)
+![ ](./images/2.PNG)
 
 >Home page now contains new functionalities within the filter movie card and new colours for some of its components. Also the pages for the "Now playing", "Popular" and "Top rated" endpoints can be navigated through the app header. These featues are visible in all the pages listed in the app header.
 
-![ ](./images/3.png)
+![ ](./images/3.PNG)
 
 >Now playing movies page for the Now playing endpoint.
 
-![ ](./images/4.png)
+![ ](./images/4.PNG)
 
 >Popular movies page for the Popular endpoint.
 
-![ ](./images/5.png)
+![ ](./images/5.PNG)
 
 >Top rated movies page for the Top rated endpoint.
 
-![ ](./images/6.png)
+![ ](./images/6.PNG)
 
 >Movie details page now shows a list of the movie actors with their names and images.
 
-![ ](./images/7.png)
+![ ](./images/7.PNG)
 
 >When an actor image is clicked in the movie details page, the user will be redirected to a new page where the actor's bio is displayed.
 
-![ ](./images/8.png)
+![ ](./images/8.PNG)
 
 >A login page for the private routes.
 
