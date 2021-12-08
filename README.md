@@ -51,9 +51,7 @@ contained many other features aside from the 3 new endpoints. The rest of the fe
 
 [ A screenshot from the Storybook UI that lists all the stories for the app's components, and highlights those relating to my __new/modified components__ .
 
-<p>
-    <img src="./images/1.PNG" width="220" height="240" />
-</p>
+![ ](./images/1.PNG)
 ### UI Design.
 
 [ A screenshots of the __new/modified app pages__ I developed (and modified existing pages), Includes an appropriate caption for each one.
